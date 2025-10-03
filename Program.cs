@@ -139,62 +139,76 @@
 
 //задание 1
 
-try
-    {
-    Console.Write("Введите первое число: ");
-    double number1 = double.Parse(Console.ReadLine());
-    Console.Write("Введите второе число:");
-    double number2 = double.Parse(Console.ReadLine());
-    Console.Write("Введите операцию (+, *, :, -, ^)");
-    string operation = Console.ReadLine();
-    Console.Write("Введите 'EXIT' чтобы выйти или наж ENTER чтобы продолжить: ");
-    string exit = Console.ReadLine();
-    double result = 0;
-    while (exit != "EXIT")
-    {
-        switch (operation)
-        {
-            case "+": 
-                result = number1 + number2;
-                Console.WriteLine($"Ответ: {result}");
-                break;
-            case "-": 
-                result = number1 - number2;
-                Console.WriteLine($"Ответ: {result}");
-                break;
-            case "*": 
-                result = number1 * number2;
-                Console.WriteLine($"Ответ: {result}");
-                break;
-            case "^": 
-                result = Math.Pow(number1,number2);
-                Console.WriteLine($"Ответ: {result}");
-                break;
-            case ":":
-                if (number2 == 0)
-                {
-                    throw new DivideByZeroException("Ошибка деления на ноль");
-                }
-                result = number1 / number2;
-                Console.WriteLine($"Ответ: {result}"); 
-                break;
-        
-            default: Console.WriteLine("Неизвестная операция"); break;
-        }
+//static double plus(double a, double b) { return a + b; }
+//static double minus(double a, double b) { return a - b; }
+//static double umn(double a, double b) { return a * b; }
+//static double del(double a, double b) { return a / b; }
+//static double step(double a, double b) { return Math.Pow(a, b); }
 
-    }
-} catch (DivideByZeroException ex)
-    {
-        Console.WriteLine($"Ошибка: {ex.Message}");
-    }
- catch (FormatException ex)
-    {
-        Console.WriteLine($"Ошибка: {ex.Message}");
-    }
- catch (Exception ex)
-    {
-        Console.WriteLine($"Ошибка: {ex.Message}");
-    }
+
+//try
+//{
+    
+//    Console.Write("Введите 'EXIT' чтобы выйти или наж ENTER чтобы продолжить: ");
+//    string exit = Console.ReadLine();
+//    double result = 0;
+//    while (true)
+//    {
+//        if (exit == "")
+//        {
+//            Console.Write("Введите первое число: ");
+//            double number1 = double.Parse(Console.ReadLine());
+//            Console.Write("Введите второе число:");
+//            double number2 = double.Parse(Console.ReadLine());
+//            Console.Write("Введите операцию (+, *, :, -, ^)");
+//            string operation = Console.ReadLine();
+//            switch (operation)
+//            {
+//                case "+":
+//                    Console.WriteLine($"Ответ: {plus(number1, number2)}");
+//                    break;
+//                case "-":
+//                    Console.WriteLine($"Ответ: {minus(number1, number2)}");
+//                    break;
+//                case "*":
+//                    Console.WriteLine($"Ответ: {umn(number1, number2)}");
+//                    break;
+//                case "^":
+//                    Console.WriteLine($"Ответ: {step(number1, number2)}");
+//                    break;
+//                case ":":
+//                    if (number2 == 0)
+//                    {
+//                        throw new DivideByZeroException("Ошибка деления на ноль");
+//                    }
+//                    Console.WriteLine($"Ответ: {del(number1, number2)}");
+//                    break;
+
+//                default: Console.WriteLine("Неизвестная операция"); break;
+//            }
+//        }
+//        else if (exit == "EXIT")
+//        {
+//            break;
+//        }
+
+//    }
+    
+//}
+//catch (DivideByZeroException ex)
+//{
+//    Console.WriteLine($"Ошибка: {ex.Message}");
+//}
+//catch (FormatException ex)
+//{
+//    Console.WriteLine($"Ошибка: {ex.Message}");
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Ошибка: {ex.Message}");
+//}
+
+//задание 2
 
 
 
